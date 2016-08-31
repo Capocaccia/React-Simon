@@ -76,9 +76,9 @@ export default class ColorBoxes extends React.Component {
     var activeColor = simonsColors[shownColorIndex];
   console.log(activeColor);
     var ColorBox = this.props.colorList.map((color, i) => {
-      const isActive = color.backgroundColor == activeColor;
+      const isActive = (color.backgroundColor == activeColor) ? '5px solid black' : '';
       return (
-          <div onClick={ () => this.handleClick(color.backgroundColor)} key={i} style={{'height' : '100px', 'width': '100px', 'backgroundColor': color.backgroundColor}}>
+          <div onClick={ () => this.handleClick(color.backgroundColor)} key={i} style={{'height' : '100px', 'width': '100px', 'backgroundColor': color.backgroundColor, 'border': isActive}}>
           </div>
       )
     });
