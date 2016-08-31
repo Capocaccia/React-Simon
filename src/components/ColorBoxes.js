@@ -1,4 +1,12 @@
 import React, { Component } from 'react';
+var count = 0;
+var userInput = [];
+var colorList = [
+  {backgroundColor: 'yellow'},
+  {backgroundColor: 'blue'},
+  {backgroundColor: 'red'},
+  {backgroundColor: 'green'}
+];
 
 export default class ColorBoxes extends React.Component {
   constructor(props) {
@@ -8,6 +16,7 @@ export default class ColorBoxes extends React.Component {
     }
   }
   handleClick(color){
+    userInput.push(color);
     this.setState({
       color: color
     })
@@ -36,8 +45,7 @@ export default class ColorBoxes extends React.Component {
     });
     return (
         <div>
-          <h2 style={{color: this.state.color}}>Click a box and I change</h2>
-          <h3>Color Selected: {this.state.color}</h3>
+          <h2>Simon</h2>
           {ColorBox}
           <button onClick={() => this.scrollColors(colorList)}>Cycle through colors</button>
           <button onClick={() => this.endScrollColors()}>Stop Cycling</button>

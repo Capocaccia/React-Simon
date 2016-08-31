@@ -5,11 +5,9 @@ import ColorBoxes from './components/ColorBoxes';
 var colorList = [
     {backgroundColor: 'yellow'},
     {backgroundColor: 'blue'},
-    {backgroundColor: 'red'}
+    {backgroundColor: 'red'},
+    {backgroundColor: 'green'}
 ];
-var count = 0;
-
-
 
 class Text extends React.Component {
     render(){
